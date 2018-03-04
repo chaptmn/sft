@@ -10,6 +10,7 @@ gem 'carrierwave'
 gem 'rmagick'
 gem "unicorn"
 gem 'slim-rails'
+gem 'gretel'
 
 
 gem "font-awesome-rails"

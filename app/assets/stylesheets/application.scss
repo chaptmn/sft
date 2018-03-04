@@ -132,3 +132,16 @@ footer{
     top: 0;
   }
 }
+
+.breadcrumbs{
+  margin-top: 5px;
+  margin-left: 5px;
+  text-align: left;
+  font-size: 12px;
+  a{
+    text-decoration: none;
+    &:hover, &:visited{
+      color: #5e5e5e;
+    }
+  }
+}
