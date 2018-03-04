@@ -1,0 +1,21 @@
+
+div.load_cover
+  div.img_container
+      -if flash[:notice]
+        div.errors
+          -flash.each do |key, value| 
+            =content_tag(:div, value, class: "#{key}") 
+  div.transparent_block
+
+div.root_header
+  img src="#{asset_path("sft_logo3_1.png")}"
+  h1 STUDY FOR TWO
+= render :partial => "shared/book_list", locals: {books: @books}
+
+javascript:
+  $(function(){
+      setTimeout(function(){
+        $('.load_cover').fadeOut('slow');
+      },700);
+   });
+    
