@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .user_register_form_container, .user_edit_form_container{
   margin: 0;
+  margin-bottom: 30px;
 }
 .user_form_title, .login_form_title{
   font-size: 24px;
@@ -19,7 +20,10 @@
      list-style: none;
      margin-bottom: 30px;
      .button-panel{
-       margin-top: 10px;
+       margin-top: 20px;
+     }
+     li{
+       margin: 20px 0;
      }
    }
    input, select{

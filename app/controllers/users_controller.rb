@@ -17,6 +17,7 @@ class UsersController < ApplicationController
       log_in @user
       redirect_to @user 
     else
+      flash[:danger] = '必要な項目を入力してください'
       render "new"
     end
   end

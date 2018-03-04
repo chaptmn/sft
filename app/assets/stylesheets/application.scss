@@ -14,6 +14,22 @@
  *= require_self
  *= require font-awesome
  */
+/* iOSでのデフォルトスタイルをリセット */
+input[type="submit"],
+input[type="button"] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;
+  box-sizing: border-box;
+    &::-webkit-search-decoration {
+      display: none;
+    }
+    &::focus {
+      outline-offset: -2px;
+    }
+}
 body,html{
   margin: 0;
   font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', "Meiryo", メイリオ, arial, helvetica, sans-serif;
@@ -106,3 +122,13 @@ footer{
   }
 }
 
+.errors{
+  padding: 20px;
+  text-align: center;
+  color: #ddd;
+  .notice{
+    background: #1c91d0;
+    position: absolute;
+    top: 0;
+  }
+}
