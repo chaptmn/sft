@@ -1,0 +1,31 @@
+ul.form-item
+  li
+     = f.label :name, "名前" 
+     =f.text_field :name 
+  li 
+     = f.label :name, "email"
+     =f.text_field :email 
+  li 
+     = f.label :name, "パスワード"
+     =f.password_field :password
+  li
+     = f.label :name, "パス確認"
+     =f.password_field :password_confirmation
+  li
+     = f.label :name, "学部"
+     = f.select :faculty, User.faculties.keys.to_a, {}
+  li
+     = f.label :name, "学科"
+     =f.select :department,  User.departments.keys.to_a, {}
+  li
+     = f.label :name, "学年"
+     = f.select :year, [1,2,3,4,]
+  li
+     = f.label :name, "Twitterアカウント名"
+     = f.text_field :tw_name
+  br
+  p 
+     |記入された場合は、予約された際DMにて連絡するために使用いたします。
+     br
+     |一般には公開されません。
+  li.button-panel = f.submit("登録", class: "button") 

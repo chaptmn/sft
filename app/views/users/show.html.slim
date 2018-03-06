@@ -6,6 +6,8 @@ ul.user_info_list
   li 学科 #{@user.department} 
   li 学年 #{@user.year}年
   li email #{@user.email} 
+  - if @user.tw_name.present?
+    li twitter @#{@user.tw_name} 
 
 .user_links
   =fa_icon "link"
