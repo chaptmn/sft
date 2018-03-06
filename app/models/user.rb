@@ -1,6 +1,7 @@
 class User < ApplicationRecord
     validates :name, presence: true
     validates :email, uniqueness: { allow_blank: true }
+    validates :tw_name, uniqueness: true 
     has_secure_password
     has_many :logs
 
