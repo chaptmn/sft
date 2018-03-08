@@ -1,7 +1,7 @@
 
-  <%= render :partial => "shared/log_table" , locals: {logs: @log}%>
-  <%= form_for @log.first, url: {action: "update"} do |f| %>
-    <%= f.hidden_field :is_processed, value: "v" %>
+  <%= render :partial => "shared/log_table" , locals: {log: @log}%>
+  <%= form_for @log, url: {action: "update"} do |f| %>
+    <%= f.hidden_field :is_processed, value: @log.is_processed %>
     <%= f.submit("確認済にする") %>
   <% end %>
 

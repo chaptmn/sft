@@ -2,20 +2,40 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .admin_reserve_container, .admin_book_index{
+  width: 100%;
+  padding: 20px 10px;
    h2{
      margin: 5px 0;
      padding: 5px;
    }
 }
-  .admin_logs_index, .admin_books{
+  .admin_logs_index, .admin_logs_show, .admin_books{
     width: 95%;
     margin: 10px auto; 
+    margin-bottom: 100px;
     th{
       font-size: 14px;
       padding: 5px;
     }
     td{
       text-align: center;
+      a{
+        text-decoration: none;
+      }
+    }
+  }
+  .admin_logs_show{
+    margin: 50px auto; 
+    margin-bottom: 100px;
+    th{
+      font-size: 14px;
+      padding: 5px;
+    }
+    td{
+      text-align: center;
+      a{
+        text-decoration: none;
+      }
     }
   }
   .edit_log{
