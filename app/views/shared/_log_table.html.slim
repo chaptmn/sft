@@ -1,0 +1,17 @@
+
+table.admin_logs_show
+  tr
+    th ユーザー名
+    th mail| twitter
+    th 個数
+    th 確認済み
+  tr
+    td = link_to(admin_log_path(log.id)) { log.user.name }
+    - if log.user.tw_name.present?
+      td 
+        a href="http://twitter.jp/#{log.user.tw_name}" @#{log.user.tw_name}
+    - else 
+      td = log.user.email
+    - if log.book.present?
+      td = log.count 
+      td = log.is_processed 
